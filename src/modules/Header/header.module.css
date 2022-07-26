@@ -1,4 +1,11 @@
 .block {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+
+.header{
+padding-top: 25px;
+padding-bottom: 25px;
+    background-color: rgb(100, 97, 255);
 }

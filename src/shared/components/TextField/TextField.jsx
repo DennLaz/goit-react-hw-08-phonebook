@@ -17,9 +17,9 @@ const TextField = ({
   const id = useMemo(() => nanoid(), []);
 
   return (
-    <div>
-      {label && <label htmlFor={id}>{label}: </label>}
-      <input
+    <div className={styles.wrap}>
+      {label && <label className={styles.label} htmlFor={id}>{label}: </label>}
+      <input className={styles.input}
         ib={id}
         name={name}
         value={value}

@@ -7,6 +7,8 @@ import RegisterForm from "modules/RegisterForm";
 
 import { signup } from "redux/auth/authOperations";
 
+import styles from './registerPage.module.css'
+
 const RegisterPage = () => {
     const dispatch = useDispatch(); 
 
@@ -24,7 +26,7 @@ const RegisterPage = () => {
     return (
         <main>
             <div>
-                <h2>Register Page</h2>
+                <h2 className={styles.text}>Register or login to your account</h2>
                 <RegisterForm onSubmit={onSubmit}/>
             </div>
         </main>

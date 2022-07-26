@@ -4,6 +4,8 @@ import TextField from 'shared/components/TextField';
 import { initialState } from './initialState';
 import { fields } from './fields';
 
+import styles from './loginForm.module.css'
+
 const LoginForm = ({ onSubmit }) => {
   const { state, handleChange, handleSubmit } = useForm({
     onSubmit,
@@ -12,10 +14,10 @@ const LoginForm = ({ onSubmit }) => {
   const { password, email } = state;
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <TextField onChange={handleChange} value={email} {...fields.email} />
       <TextField onChange={handleChange} value={password}{...fields.password} />
-      <button type="submit">Login</button>
+      <button className={styles.btn} type="submit">Login</button>
     </form>
   );
 };

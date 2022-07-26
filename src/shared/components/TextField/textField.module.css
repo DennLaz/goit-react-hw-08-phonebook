@@ -1,0 +1,21 @@
+.wrap{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.label{
+    font-weight: 700;
+}
+
+.input{
+    padding: 5px;
+    width: 250px;
+    outline: none;
+    border: 1px solid gold;
+background-color: inherit;
+}

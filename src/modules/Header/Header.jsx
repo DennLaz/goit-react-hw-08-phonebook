@@ -10,7 +10,7 @@ const Header = () => {
     const isLogin = useAuth();
 
     return (
-        <header>
+        <header className={styles.header}>
             <div className={styles.block}>
                 <HeaderMenu isLogin={isLogin} />
                 {isLogin ? <UserMenu /> : <HeaderAuth />}

@@ -5,6 +5,8 @@ import { login } from "redux/auth/authOperations";
 import useAuth from "shared/hooks/useAuth";
 import LoginForm from "modules/LoginForm";
 
+import styles from './loginPage.module.css'
+
 const LoginPage = () => {
     const dispatch = useDispatch();
 
@@ -21,7 +23,7 @@ const LoginPage = () => {
     return (
         <main>
             <div>
-                <h2>Login Page</h2>
+                <h2 className={styles.text}>Login</h2>
                 <LoginForm onSubmit={onSubmit}/>
             </div>
         </main>
