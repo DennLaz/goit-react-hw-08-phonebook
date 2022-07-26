@@ -21,7 +21,8 @@ export const addPhoneBook = createAsyncThunk(
       const result = await api.addPhoneBook(data);
       return result;
     } catch (error) {
-      return rejectWithValue(error);
+      const { data, status } = error.response;
+      return rejectWithValue({ data, status });
     }
   },
   {

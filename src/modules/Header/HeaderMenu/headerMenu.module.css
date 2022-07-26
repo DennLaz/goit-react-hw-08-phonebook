@@ -1,0 +1,19 @@
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    display: inline-block;
+    text-decoration: none;
+    color: blueviolet;
+    padding: 10px 15px;
+    border-radius: 9px;
+}
+
+.linkActive {
+    composes: link;
+    color: rgb(5, 213, 255);
+    background-color: rgb(239, 254, 23);
+}

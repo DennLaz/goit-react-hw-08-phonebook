@@ -41,11 +41,14 @@ const phoneBookSlice = createSlice({
       store.items.push(payload);
       store.loading = false;
     },
-    [addPhoneBook.rejected]: rejected,
+    [addPhoneBook.rejected]: (store, { payload }) => {
+      store.loading = false;
+      store.error = payload;
+    },
     /* REMOVE */
     [removePhoneBook.pending]: pending,
     [removePhoneBook.fulfilled]: (store, { payload }) => {
-      store.items = store.items.filter(({ id }) => id !== payload.id);
+      store.items = store.items.filter(({ id }) => id !== payload);
       store.loading = false;
     },
     [removePhoneBook.rejected]: rejected,

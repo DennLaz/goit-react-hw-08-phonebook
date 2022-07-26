@@ -1,0 +1,24 @@
+import useForm from 'shared/hooks/useForm';
+
+import TextField from 'shared/components/TextField';
+
+import { initialState } from './initialState';
+import { fields } from './fields';
+
+const RegisterForm = ({onSubmit}) => {
+
+    const { state, handleChange, handleSubmit } = useForm({ onSubmit, initialState })
+    
+    const { name, email, password } = state;
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <TextField onChange={handleChange} value={name} {...fields.name} />
+            <TextField onChange={handleChange} value={email} {...fields.email} />
+            <TextField onChange={handleChange} value={password} {...fields.password} />
+            <button type='submit'>Register</button>
+        </form>
+    )
+ }
+
+export default RegisterForm;
